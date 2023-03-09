@@ -18,8 +18,8 @@ data "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-2004-lts"
 }
 
-resource "yandex_compute_instance" "vm-test1" {
-  name = "test1"
+resource "yandex_compute_instance" "dev" {
+  name = "dev"
 
   resources {
     cores  = 2
@@ -43,33 +43,8 @@ resource "yandex_compute_instance" "vm-test1" {
 
 }
 
-resource "yandex_compute_instance" "vm-test1" {
-  name = "test2"
-
-  resources {
-    cores  = 2
-    memory = 2
-  }
-
-  boot_disk {
-    initialize_params {
-      image_id = data.yandex_compute_image.ubuntu_image.id
-    }
-  }
-
-  network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
-    nat       = true
-  }
-
-  metadata = {
-    user-data = "${file("./meta.yml")}"
-  }
-
-}
-
-resource "yandex_compute_instance" "vm-test2" {
-  name = "test3"
+resource "yandex_compute_instance" "prod" {
+  name = "prod"
 
   resources {
     cores  = 2
