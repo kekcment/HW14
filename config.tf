@@ -33,7 +33,7 @@ resource "yandex_compute_instance" "vm-test1" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.enp21oq1iip6h6dvmv21
+    subnet_id = yandex_vpc_subnet.default.id
     nat       = true
   }
 
@@ -43,16 +43,16 @@ resource "yandex_compute_instance" "vm-test1" {
 
 }
 
-# resource "yandex_vpc_network" "network_terraform" {
-#   name = "net_terraform"
-# }
+resource "yandex_vpc_network" "network_terraform" {
+  name = "net_terraform"
+}
 
-# resource "yandex_vpc_subnet" "subnet_terraform" {
-#   name           = "sub_terraform"
-#   zone           = "ru-central1-a"
-#   network_id     = yandex_vpc_network.network_terraform.id
-#   v4_cidr_blocks = ["192.168.15.0/24"]
-# }
+resource "yandex_vpc_subnet" "subnet_terraform" {
+  name           = "sub_terraform"
+  zone           = "ru-central1-a"
+  network_id     = yandex_vpc_network.default.id
+  v4_cidr_blocks = ["192.168.15.0/24"]
+}
 
 # resource "yandex_compute_instance" "vm-1" {
 #   name = "terraform1"
