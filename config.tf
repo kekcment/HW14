@@ -11,7 +11,7 @@ provider "yandex" {
   token     = "y0_AgAAAAAQPnfPAATuwQAAAADeExK7EkFw1zMmQb6ZTYbmpmw_j60rPHs"
   cloud_id  = "b1g6n29jkok2srs36sqc"
   folder_id = "b1g6lkkjagvcniim0l5h"
-  zone      = "ru-central1-b"
+#   zone      = "ru-central1-b"
 }
 
 data "yandex_compute_image" "ubuntu_image" {
