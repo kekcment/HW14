@@ -6,5 +6,4 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ6/DR/1WbVvSkWLxj2xexcQSJCayzjiKpe4Og4fYOA4 gorbanev.am@ya.ru
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/Vi4+IY09E/2edpSi5RnHhmVveFNpOAw2Juro5m3u56OlSGCe5/ZSQ5y8e/1cfdXi/NVjEEfbYgMvpk3Po/MnPRGJlkVccel5Y8oOEwwrholPGxj8iyYVxZlxbPAW3WYBoHHH+as+T8yE9Km9sPVav2SWrioH8lBhswI4uVr7b1b2Hlzippgsz7hQzKWbewbTVKZ2TMGMpFvB3RT04bbXjVUeI0qrO/Hupz0Se8C2Ej80w3ZCxjGb+8cL4tTFFfzhhMwHwZC8/jc8n/1FKN5MdaSPgCL/OA77DsB+kcJLiUm9lSPl7jDRb5n2k+kWbPUJK1IubJN87FBGpEK0cARx dev
+ 
