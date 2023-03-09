@@ -48,13 +48,14 @@ resource "yandex_compute_instance" "prod" {
   name = "prod"
 
   resources {
-    cores  = 2
-    memory = 2
+    cores  = 4
+    memory = 4
   }
 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu_image.id
+      size = 20
     }
   }
 
